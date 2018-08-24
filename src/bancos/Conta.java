@@ -41,4 +41,15 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
+	public void depositar(float valor) {
+		this.setSaldo(this.getSaldo()+valor);
+	}
+	
+	public boolean sacar(float valor) {
+		if(this.getSaldo()>=valor) {
+			this.setSaldo(getSaldo()-valor);
+			return true;
+		}
+			return false;
+	}
 }

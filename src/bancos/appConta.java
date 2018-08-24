@@ -23,6 +23,14 @@ public class appConta {
 		System.out.println("O numero da conta é :" +c2.getNumero());
 		System.out.println("O valor inicial da conta é :" +c2.getSaldo());
 		
+		
+		if(c2.sacar(4.00f)) 
+			System.out.println("Saque efetuado com sucesso");
+		else
+			System.out.println("Saque Não resalizado - Saldo Insuficiete");
+		
+		c2.depositar(1000909978.00f);
+		System.out.println("Novo Saldo é : "+ c2.getSaldo());
 	}
-
+		
 }
