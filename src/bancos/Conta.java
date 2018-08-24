@@ -2,36 +2,43 @@ package bancos;
 
 public class Conta {
 
-	private int mumero;
-	private String correntista;
-	private float valor;
+	private int numero;
+	private Pessoa correntista;
+	private float saldo;
 	
 	public Conta() {
 		
 	}
-
-	public int getMumero() {
-		return mumero;
+	
+	public Conta (int numero,Pessoa correntista, float saldo) {
+		this.setNumero(numero);
+		this.setCorrentista(correntista);
+		this.setSaldo(saldo);
+		
 	}
 
-	public void setMumero(int mumero) {
-		this.mumero = mumero;
+	public int getNumero() {
+		return numero;
 	}
 
-	public String getCorrentista() {
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Pessoa getCorrentista() {
 		return correntista;
 	}
 
-	public void setCorrentista(String correntista) {
+	public void setCorrentista(Pessoa correntista) {
 		this.correntista = correntista;
 	}
 
-	public float getValor() {
-		return valor;
+	public float getSaldo() {
+		return saldo;
 	}
 
-	public void setValor(float valor) {
-		this.valor = valor;
+	public void setSaldo(float saldo) {
+		this.saldo = saldo;
 	}
 	
 }
