@@ -1,20 +1,22 @@
-package bancos;
+package contas;
 
-public class Conta {
+import classes.Pessoa;
+
+public abstract class Conta {
 
 	private int numero;
 	private Pessoa correntista;
 	private float saldo;
-	
+
 	public Conta() {
-		
+
 	}
-	
-	public Conta (int numero,Pessoa correntista, float saldo) {
+
+	public Conta(int numero, Pessoa correntista, float saldo) {
 		this.setNumero(numero);
 		this.setCorrentista(correntista);
 		this.setSaldo(saldo);
-		
+
 	}
 
 	public int getNumero() {
@@ -40,17 +42,10 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
-	
+
 	public void depositar(float valor) {
-		this.setSaldo(this.getSaldo()+valor);
+		this.setSaldo(this.getSaldo() + valor);
 	}
-	
-	
-	public boolean sacar(float valor) {
-		if(this.getSaldo()>=valor) {
-			this.setSaldo(getSaldo()-valor);
-			return true;
-		}
-			return false;
-	}
+
+	public abstract boolean sacar(float valor);
 }

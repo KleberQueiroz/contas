@@ -1,4 +1,4 @@
-package bancos;
+package classes;
 
 public class Pessoa {
 

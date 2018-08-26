@@ -1,4 +1,6 @@
-package bancos;
+package contas;
+
+import classes.Pessoa;
 
 public class ContaEspecial extends Conta {
 

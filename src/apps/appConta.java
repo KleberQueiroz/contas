@@ -1,4 +1,7 @@
-package bancos;
+package apps;
+
+import classes.Pessoa;
+import contas.Conta;
 
 public class appConta {
 
