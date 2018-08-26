@@ -7,7 +7,7 @@ public class appConta {
 
 	public static void main(String[] args) {
 
-		Pessoa p1 = new Pessoa("Fulano", "fulano@gmail.com");
+		Pessoa p1 = new classes.Pessoa("Fulano", "fulano@gmail.com");
 		Pessoa p2 = new Pessoa("Ciclano", "ciclano@gmail.com");
 		Conta c1 = new Conta();
 		

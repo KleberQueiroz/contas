@@ -17,5 +17,11 @@ public static void main(String[] args) {
 	ContaEspecial e1 = new ContaEspecial(123456, p2,2500.00f,5500.00f );
 	
 	System.out.println(" Número de contas criadas: "+ e1.getNumeroContas());
+	
+	
+	if(c1.movimentar(151.00f, Conta.SACAR))
+		System.out.println("Saque Realizado com Sucesso");
+	else
+		System.out.println("Impossivel realizar o saque");
 }
 }
