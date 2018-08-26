@@ -7,12 +7,14 @@ public abstract class Conta {
 	private int numero;
 	private Pessoa correntista;
 	private float saldo;
+	private static int numeroContas;
 
 	public Conta() {
-
+		incrementaContas();
 	}
 
 	public Conta(int numero, Pessoa correntista, float saldo) {
+		this();
 		this.setNumero(numero);
 		this.setCorrentista(correntista);
 		this.setSaldo(saldo);
@@ -43,9 +45,18 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 
+	public int getNumeroContas() {
+		return Conta.numeroContas;
+	}
+	
 	public final void depositar(float valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
 
 	public abstract boolean sacar(float valor);
+
+	private static void incrementaContas() {
+		++numeroContas;
+	}
+
 }

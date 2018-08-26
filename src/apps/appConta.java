@@ -1,6 +1,6 @@
 package apps;
 
-import classes.Pessoa;
+import bancos.Pessoa;
 import contas.Conta;
 
 public class appConta {
