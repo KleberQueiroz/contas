@@ -21,6 +21,10 @@ public class AppContaEspecial {
 		
 		System.out.println("Saldo da conta : "+ e1.getSaldo());
 		
+		e1.descontarTaxaManuntecao();
+		
+		System.out.println("Saldo após descontar a taxa de manutenção " + e1.getSaldo());
+		
 
 }
 

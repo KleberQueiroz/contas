@@ -2,7 +2,7 @@ package contas;
 
 import classes.Pessoa;
 
-public class ContaEspecial extends Conta {
+public final class ContaEspecial extends Conta implements Taxas {
 
 	private float limite;
 	
@@ -31,5 +31,15 @@ public class ContaEspecial extends Conta {
 	return false;
 	
 	}
+	@Override
+	public float getTaxaManutencao() {
 	
+		return 15.00f;
+	}
+	@Override
+	public void descontarTaxaManuntecao() {
+	
+		this.setSaldo(this.getSaldo()-this.getTaxaManutencao());
+		
+	}
 }

@@ -2,7 +2,7 @@ package contas;
 
 import classes.Pessoa;
 
-public class ContaComum extends Conta{
+public final class ContaComum extends Conta implements Taxas{
 
 	public ContaComum() {
 		
@@ -16,5 +16,16 @@ public class ContaComum extends Conta{
 			return true;
 		}			
 		return false;
+	}
+	@Override
+	public float getTaxaManutencao() {
+	
+		return 15.00f;
+	}
+	@Override
+	public void descontarTaxaManuntecao() {
+	
+		this.setSaldo(this.getSaldo()-this.getTaxaManutencao());
+		
 	}
 }

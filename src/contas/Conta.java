@@ -43,7 +43,7 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 
-	public void depositar(float valor) {
+	public final void depositar(float valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
 
